@@ -70,7 +70,10 @@ class Random
         // If table id digits equal to init digits or table id digits
         // grater than init digits,
         // don't subtract it from init digits to get needed number of left_digits
-        if ($id_length == $init || $id_length > $init) {
+        if (
+            $id_length == $init ||
+            $id_length > $init
+        ) {
             $left_digits = 0;
         }
 

@@ -26,9 +26,6 @@
     },
     "extra": {
         "laravel": {
-            "providers": [
-                "Muathye\\UniqueRandomNumber\\Providers\\MuathyeServiceProvider"
-            ],
             "aliases": {
                 "Random": "Muathye\\UniqueRandomNumber\\Random"
             }

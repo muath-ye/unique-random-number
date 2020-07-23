@@ -9,7 +9,7 @@
  * @license  MIT https://opensource.org/licenses/MIT
  * @link     Muathye https://www.github.com/muath-ye
  */
-namespace Muathye\UniqueRandomNumber;
+namespace Muathye\UniqueRandomNumber\Providers;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 /**
@@ -26,33 +26,24 @@ class MuathyeServiceProvider extends ServiceProvider
 {
 
     /**
-     * Generate Random Number
+     * Bootstrap the application events.
      *
      * @return void
      */
     public function boot()
     {
-        View::composer(
-            '*', function ($view) {
-                $view->with('offers', 'good news');
-            }
-        );
+        //
     }
 
     /**
-     * Generate Random Number
+     * Register the service provider.
      *
      * @return void
      */
     public function register()
     {
-
-        //* Register the service provider for the dependency.
-        $this->app->make('Muathye\UniqueRandomNumber\Random');
-
-        // * Create aliases for the dependency.
-        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-        $loader->alias('Random', 'Muathye\\UniqueRandomNumber\\Random');
+        //TODO: not working, so the user needs to register this alias.
+        $this->app->alias('Random', 'Muathye\UniqueRandomNumber\Random');
     }
 
 }
