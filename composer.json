@@ -10,7 +10,7 @@
         "client",
         "HTTP client"
     ],
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
